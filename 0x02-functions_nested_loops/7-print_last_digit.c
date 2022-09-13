@@ -3,17 +3,19 @@
 /**
  * print_last_digit - print last digit
  *
- * @n: an integer
+ * @n: integer parameter
  *
  * Return: integer
  */
 
 int print_last_digit(int n)
 {
-	int l;
+	int l = n % 10;
 
-	l = n % 10;
-	_putchar(l);
+	if (n < 0)
+		l = l * -1;
+
+	_putchar(l + '0');
 
 	return (l);
 }
