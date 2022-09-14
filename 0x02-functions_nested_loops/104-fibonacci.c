@@ -36,8 +36,8 @@ int main(void)
 		else
 		{
 			tens = s_first + s_second;
-			s_first = s_second, s_second = tns;
-			printf("%lu", s_seconds);
+			s_first = s_second, s_second = tens;
+			printf("%lu", s_second);
 		}
 		if (count != 97)
 			printf(", ");
