@@ -18,14 +18,14 @@ int main(void)
 	first = 0;
 	second = 1;
 
-	for (count = 0; count < 8; count++)
+	for (count = 0; count < 98; count++)
 	{
 		sum = first + second;
 		printf("%lu, ", sum);
 		first = second;
 		second = sum;
 	}
-	sum = first + second;
+	/*sum = first + second;*/
 	printf("%lu\n", sum);
 
 	return (0);
