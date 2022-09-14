@@ -1,4 +1,5 @@
 #include "main.h"
+#include <dtdio.h>
 
 /**
  * print_to_98 - prints numbers to 98
@@ -14,9 +15,7 @@ void print_to_98(int n)
 	{
 		while (n < 98)
 		{
-			_putchar(n);
-			_putchar(44);
-			_putchar(32);
+			printf("%d, ", n);
 			n++;
 		}
 	}
@@ -24,12 +23,9 @@ void print_to_98(int n)
 	{
 		while (n > 98)
 		{
-			_putchar(n);
-			_putchar(44);
-			_putchar(32);
+			printf("%d, ", n);
 			n--;
 		}
 	}
-	_putchar('98');
-	_putchar(10);
+	printf("98\n");
 }
