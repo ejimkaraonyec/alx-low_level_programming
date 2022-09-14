@@ -25,7 +25,7 @@ int main(void)
 		first = second;
 		second = sum;
 	}
-	/*sum = first + second;*/
+	sum = first + second;
 	printf("%lu\n", sum);
 
 	return (0);
