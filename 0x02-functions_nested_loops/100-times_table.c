@@ -17,6 +17,8 @@ void print_times_table(int n)
 		{
 			for (vet = 0; vet <= n; vet++)
 			{
+				prod = hor * vet;
+
 				if (vet == 0)
 					_putchar(48);
 				else if (prod < 10)
