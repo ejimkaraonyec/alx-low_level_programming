@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	long int sum, first, second;
+	unsigned long int sum, first, second;
 	int count;
 
 	sum = 0;
@@ -21,12 +21,12 @@ int main(void)
 	for (count = 0; count < 98; count++)
 	{
 		sum = first + second;
-		printf("%li, ", sum);
+		printf("%lu, ", sum);
 		first = second;
 		second = sum;
 	}
 	sum = first + second;
-	printf("%li\n", sum);
+	printf("%lu\n", sum);
 
 	return (0);
 }
