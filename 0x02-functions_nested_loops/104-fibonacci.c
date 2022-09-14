@@ -11,43 +11,41 @@
 
 int main(void)
 {
-	int count;
-	unsigned long first = 0, second = 1, sum;
-	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
-	unsigned long half1, half2;
+	unsigned long frp1, frp2, ar1, n1 = 1, n2 = 2;
+	int a, b, ar2, secp1, secp2;
 
-	for (count = 0; count < 92; count++)
+	for (a = 1; a <= 90; a++)
 	{
-		sum = first + second;
-		printf("%lu, ", sum);
-
-		first = second;
-		second = sum;
+		if (a == 1)
+			printf("1, 2, ");
+		ar1 = (n1 + n2);
+		printf("%lu, ", ar1);
+		n1 = n2;
+		n2 = ar1;
 	}
-
-	fib1_half1 = first / 10000000000;
-	fib2_half1 = second / 10000000000;
-	fib1_half2 = first / 10000000000;
-	fib2_half2 = second / 10000000000;
-
-	for (count = 93; count < 99; count++)
+	frp1 = n1 / 100;
+	frp2 = n2 / 100;
+	secp1 = n1 % 100;
+	secp2 = n2 % 100;
+	for (b = 1; b <= 6; b++)
 	{
-		half1 = fib1_half1 + fib2_half1;
-		half2 = fib1_half2 + fib2_half2;
-		if (fib1_half2 + fib2_half2 > 9999999999)
+		ar1 = frp1 + frp2;
+		ar2 = secp1 + secp2;
+		if (ar2 > 99)
 		{
-			half1 += 1;
-			half2 %= 10000000000;
+			ar1 += 1;
+			ar2 = ar2 % 100;
+			if (ar2 < 10)
+				printf("%lu0%d", ar1, ar2);
 		}
-
-		printf("%lu%lu", half1, half2);
-		if (count != 98)
+		if (ar2 >= 10)
+			printf("%lu%d", ar1, ar2);
+		if (b < 6)
 			printf(", ");
-
-		fib1_half1 = fib2_half1;
-		fib1_half2 = fib2_half2;
-		fib2_half1 = half1;
-		fib2_half2 = half2;
+		frp1 = frp2;
+		frp2 = ar1;
+		secp1 = secp2;
+		secp2 = ar2;
 	}
 	printf("\n");
 	return (0);
