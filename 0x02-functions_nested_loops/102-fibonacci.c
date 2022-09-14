@@ -18,7 +18,7 @@ int main(void)
 	first = 0;
 	second = 1;
 
-	for (count = 0; count < 49 count++)
+	for (count = 0; count < 49; count++)
 	{
 		sum = first + second;
 		printf("%li, ", sum);
