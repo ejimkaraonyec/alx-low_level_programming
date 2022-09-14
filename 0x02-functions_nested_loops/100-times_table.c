@@ -11,7 +11,7 @@ void print_times_table(int n)
 {
 	int hor, vet, prod;
 
-	if (n < 15 || n >= 0)
+	if (n < 15 && n >= 0)
 	{
 		for (hor = 0; hor <= n; hor++)
 		{
