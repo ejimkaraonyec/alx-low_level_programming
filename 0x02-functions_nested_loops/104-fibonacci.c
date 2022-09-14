@@ -26,7 +26,7 @@ int main(void)
 		second = sum;
 	}
 	sum = first + second;
-	printf("%li\n", sum);
+	printf("%li... \n", sum);
 
 	return (0);
 }
