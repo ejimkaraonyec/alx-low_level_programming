@@ -41,7 +41,7 @@ int main(void)
 		}
 
 		printf("%lu%lu", half1, half2);
-		if (i != 98)
+		if (count != 98)
 			printf(", ");
 
 		fib1_half1 = fib2_half1;
