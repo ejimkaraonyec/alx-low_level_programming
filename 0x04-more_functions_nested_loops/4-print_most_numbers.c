@@ -14,7 +14,7 @@ void print_most_numbers(void)
 	max = 57;
 	while (min <= max)
 	{
-		if (min != 2 || min != 4)
+		if (min != 2 && min != 4)
 			_putchar(min);
 		min++;
 	}
