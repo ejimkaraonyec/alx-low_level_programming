@@ -16,17 +16,17 @@ void more_numbers(void)
 		tens = 48;
 		for (j = 0; j <= 14; j++)
 		{
-			if (j <= 9)
-			{
-				_putchar(i);
-				i++;
-			}
-			else
+			if (j > 9)
 			{
 				_putchar(49);
-				_putchar(tens);
-				tens++;
+				if (tens <= 48)
+				{
+					i = 48;
+					tens++;
+				}
 			}
+			_putchar(i);
+			i++;
 		}
 		_putchar(10);
 	}
