@@ -14,7 +14,7 @@ void more_numbers(void)
 	{
 		i = 48;
 		tens = 48;
-		for (j = 0; j < 14; j++)
+		for (j = 0; j <= 14; j++)
 		{
 			if (j <= 9)
 			{
