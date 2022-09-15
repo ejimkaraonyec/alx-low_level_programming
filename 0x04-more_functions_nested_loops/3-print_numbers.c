@@ -13,5 +13,9 @@ void print_numbers(void)
 	min = 48;
 	max = 57;
 	while (min <= max)
+	{
 		_putchar(min);
+		min++;
+	}
+	_putchar(10);
 }
