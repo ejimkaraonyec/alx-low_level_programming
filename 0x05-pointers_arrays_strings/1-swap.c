@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * swap_int - function to swap two integers using pointers
  *
@@ -11,7 +9,7 @@
 
 void swap_int(int *a, int *b)
 {
-	int *tmp = NULL;
+	int *tmp;
 
 	*tmp = *a;
 	*a = *b;
