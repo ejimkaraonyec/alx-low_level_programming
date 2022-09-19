@@ -10,16 +10,17 @@
 
 void puts_half(char *str)
 {
-	int loc, half, len;
+	int loc, len;
 
 	for (loc = 0; str[loc] != '\0'; loc++)
 		;
-	len = loc;
-	half = len / 2;
-	while (half <= len)
-	{
-		_putchar(str[half]);
-		half++;
-	}
+	if (loc % 2 == 1)
+		len = loc / 2;
+	else
+		len = (loc - 1) / 2;
+
+	for (len++; len < loc; len++)
+		_putchar(str[len]);
+
 	_putchar(10);
 }
