@@ -15,9 +15,9 @@ void print_rev(char *s)
 	for (loc = 0; loc != '\0'; loc++)
 		;
 
-	while (str[loc] <= 0)
+	while (s[loc] <= 0)
 	{
-		_putchar(str[loc]);
+		_putchar(s[loc]);
 		loc--;
 	}
 	_putchar(10);
