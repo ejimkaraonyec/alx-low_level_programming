@@ -12,7 +12,7 @@ void print_rev(char *s)
 {
 	int loc;
 
-	for (loc = 0; loc != '\0'; loc++)
+	for (loc = 0; s[loc] != '\0'; loc++)
 		;
 
 	while (s[loc] <= 0)
