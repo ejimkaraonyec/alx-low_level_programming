@@ -12,10 +12,13 @@ void print_rev(char *s)
 {
 	int loc;
 
-	for (loc = 0; s[loc] != '\0'; loc++)
-		;
+	loc =0;
+	while (s[loc] != '\0')
+	{
+		loc++;
+	}
 
-	while (s[loc] <= 0)
+	while (s[loc] >= 0)
 	{
 		_putchar(s[loc]);
 		loc--;
