@@ -17,7 +17,7 @@ int main(void)
 
 	srand(time(0));
 	pwd = rand();
-	printf("%d\n", pwd);
+	printf("%i\n", pwd);
 
 	return (0);
 }
