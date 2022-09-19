@@ -5,16 +5,16 @@
 /**
  * main - Entry point
  *
- * @pwd: the password
- *
  * Description: this program generates and prints
  * to the standard output a random valid password
  *
  * Return: void
  */
 
-int main(int pwd)
+int main(void)
 {
+	int pwd;
+
 	srand(time(0));
 	pwd = rand();
 	printf("%d\n", pwd);
