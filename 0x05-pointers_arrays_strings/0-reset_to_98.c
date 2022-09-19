@@ -1,7 +1,7 @@
 /**
  * reset_to_98 - function to reset a variable using a pointer
  *
- * @a: pointer variable points to an int
+ * @n: pointer variable points to an int
  *
  * Return: nothing
  */
