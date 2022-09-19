@@ -9,15 +9,19 @@
 void rev_string(char *s)
 {
 	int loc, i;
+	char begin, end;
 
 	for (loc = 0; s[loc] != '\0'; loc++)
 		;
 
-	i = 0;
-	while (loc >= 0)
+	loc--;
+	i = loc / 2;
+	while (i >= 0)
 	{
-		*(s + i) = s[loc];
-		loc--;
-		i++;
+		begin = s[loc - i];
+		end = s[i];
+		s[i] = begin;
+		s[loc - i] = end;
+		i--;
 	}
 }
