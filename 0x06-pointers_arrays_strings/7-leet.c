@@ -3,13 +3,14 @@
 /**
  * leet - encode a string into 1337
  *
- * @s: character string array
+ * @*: pointer to character string array
  *
  * Return: the result
  */
 
-char *leet(char *s)
+char *leet(char *)
 {
+	char *s = *;
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
