@@ -3,28 +3,23 @@
 /**
  * leet - encode a string into 1337
  *
- * @*: pointer to character string array
+ * @s: pointer to character string array
  *
  * Return: the result
  */
 
-char *leet(char *)
+char *leet(char *s)
 {
-	char *s = *;
-	int i;
+	int i, j;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i]; i++)
 	{
-		if (s[i] == 'a' || s[i] == 'A')
-			s[i] = '4';
-		if (s[i] == 'e' || s[i] == 'E')
-			s[i] = '3';
-		if (s[i] == 'o' || s[i] == 'O')
-			s[i] = '0';
-		if (s[i] == 't' || s[i] == 'T')
-			s[i] = '7';
-		if (s[i] == 'l' || s[i] == 'L')
-			s[i] = '1';
+		for (j = 0; j <= 7; j++)
+		{
+			if (str[i] == leet[j] || str[i] - 32 == leet[j])
+				str[i] = j + '0';
+		}
 	}
 
 	return (s);
