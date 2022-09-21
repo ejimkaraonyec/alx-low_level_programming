@@ -13,12 +13,12 @@ char *leet(char *s)
 	int i, j;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; s[i]; i++)
 	{
 		for (j = 0; j <= 7; j++)
 		{
-			if (str[i] == leet[j] || str[i] - 32 == leet[j])
-				str[i] = j + '0';
+			if (s[i] == leet[j] || s[i] - 32 == leet[j])
+				s[i] = j + '0';
 		}
 	}
 
