@@ -10,9 +10,9 @@
 char *rot13(char *str)
 {
 	int i, j;
-
 	char *src = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *code = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
 	i = j = 0;
 
 	for (; str[i]; i++)
