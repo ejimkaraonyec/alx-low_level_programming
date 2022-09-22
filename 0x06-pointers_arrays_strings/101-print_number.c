@@ -10,21 +10,18 @@
 
 void print_number(int n)
 {
-	unsigned int i, j = 1;
+	unsigned int c;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n -= n;
+		c = -n;
 	}
-	i =  (unsigned int)n;
+	else
+		c = n;
 
-	while (i / j > 9)
-		j *= 10;
-	while (j)
-	{
-		_putchar('0' + i / j);
-		i %= j;
-		j /= 10;
-	}
+	if (c / 10)
+		print_number(c / 10);
+
+	_putchar(c % 10 + '0');
 }
