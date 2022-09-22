@@ -9,19 +9,19 @@
 
 char *rot13(char *str)
 {
-	int i, j;
+	int i;
 	char *src = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *code = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	i = j = 0;
+	i = 0;
 
-	for (; str[i]; i++)
+	for (; *str != '\0'; *str++)
 	{
-		for (; src[j]; j++)
+		for (; src[i]; i++)
 		{
-			if (str[i] == src[j])
+			if (*str == src[i])
 			{
-				str[i] = code[j];
+				*str = code[i];
 				break;
 			}
 		}
