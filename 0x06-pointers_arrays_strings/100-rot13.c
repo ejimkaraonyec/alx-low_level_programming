@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * *rot13 - encode a string using rot13.
  *
@@ -15,9 +16,9 @@ char *rot13(char *str)
 	char *code = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 
-	for (; *str != '\0'; *str++)
+	for (; *str != '\0'; str++)
 	{
-		for (i = 0; i < 53; i++)
+		for (i = 0; src[i]; i++)
 		{
 			if (*str == src[i])
 			{
