@@ -10,6 +10,7 @@
 char *rot13(char *str)
 {
 	int i;
+	char *ptr_s = str;
 	char *src = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *code = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
@@ -27,5 +28,5 @@ char *rot13(char *str)
 		}
 	}
 
-	return (str);
+	return (ptr_s);
 }
