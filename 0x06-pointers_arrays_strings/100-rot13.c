@@ -14,11 +14,10 @@ char *rot13(char *str)
 	char *src = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *code = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	i = 0;
 
 	for (; *str != '\0'; *str++)
 	{
-		for (; src[i]; i++)
+		for (i = 0; i < 53; i++)
 		{
 			if (*str == src[i])
 			{
