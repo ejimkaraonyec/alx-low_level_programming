@@ -23,7 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (*(s + i) == *(accept + j))
 				bytes++;
 		}
-		if (prev == bytes))
+		if (prev == bytes)
 			break;
 	}
 
