@@ -13,19 +13,16 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int bytes = 0;
+	int i, j;
 
-	for (; *s; s++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		for (; *accept; accept++)
+		for (j = 0; *(accept + j) != '\0'; j++)
 		{
-			if (*s == *accept)
-			{
+			if (*(s + i) == *(accept + j))
 				bytes++;
-				break;
-			}
-
 		}
-		if (*accept == '\0')
+		if (*(accept + i) == '\0')
 			break;
 	}
 
