@@ -1,5 +1,5 @@
 #include "main.h"
-#define NULL '\0' /* a constant returned where the sequence isn't found */
+#define NULL 0 /* a constant returned where the sequence isn't found */
 
 /**
  * _strstr - locates a substring
@@ -16,26 +16,19 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int loc;
+	int i, j, nlen, st;
 
-	if (*needle == 0)
-		return (haystack);
-
-	while (*haystack)
+	for (nlen = 0; *(needle + nlen) != '\0'; nlen++)
+		;
+	for (i = 0; *(haystack + i) != '\0'; i++)
 	{
-		loc = 0;
-
-		if (*(haystack + loc) == *(needle + loc))
+		for (j = 0; j < nlen && *(haystack + i) == *(needle + j); j++, i++)
 		{
-			do {
-				if (*(needle + 1) == '\0')
-					return (haystack);
-
-				loc++;
-
-			} while (*(haystack + loc) == *(needle + loc));
+			if (j == 0)
+				st = i;
+			if (j == nlen - 1)
+				return (haystack + start);
 		}
-		haystack++;
 	}
 
 	return (NULL);
