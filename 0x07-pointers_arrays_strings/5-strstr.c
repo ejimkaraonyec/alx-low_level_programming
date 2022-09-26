@@ -20,7 +20,7 @@ char *_strstr(char *haystack, char *needle)
 	if (*needle == 0)
 		return (haystack);
 
-	for (; *haystack; haystack++)
+	while (*haystack)
 	{
 		loc = 0;
 
@@ -34,6 +34,7 @@ char *_strstr(char *haystack, char *needle)
 
 			} while (*(haystack + loc) == *(needle + loc));
 		}
+		haystack++;
 	}
 
 	return (0);
