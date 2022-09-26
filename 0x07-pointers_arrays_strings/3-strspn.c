@@ -26,7 +26,7 @@ unsigned int _strspn(char *s, char *accept)
 
 		}
 		if (*accept == '\0')
-			return (bytes);
+			break;
 	}
 
 	return (bytes);
