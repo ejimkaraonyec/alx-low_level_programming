@@ -3,14 +3,14 @@
 #include <stdlib.h>
 
 /**
- * isdigit - checks to see if input is a number
+ * _isdigit - checks to see if input is a number
  *
  * @s: poointer to a sting
  *
  * Return: 1 if it is a number, else return 0
  */
 
-int isdigit(char *s)
+int _isdigit(char *s)
 {
 	int i;
 
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 		i = 1;
 		while (i < argc)
 		{
-			is_num = isdigit(argv[i]);
+			is_num = _isdigit(argv[i]);
 			if (is_num == 1)
 				sum += atoi(argv[i]);
 			else
