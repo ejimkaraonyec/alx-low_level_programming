@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 
 	for (arg = 0; arg < ac; arg++)
 	{
-		for (bytes = 0; av[arg][bytes]; byte+, size++)
+		for (bytes = 0; av[arg][bytes]; bytes++, size++)
 			;
 	}
 
