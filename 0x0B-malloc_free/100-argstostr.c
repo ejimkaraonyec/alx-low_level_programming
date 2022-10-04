@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 
 	for (arg = 0; arg < ac; arg++)
 	{
-		for (byte = 0; av[arg][byte]; byte++, size++)
+		for (bytes = 0; av[arg][bytes]; byte+, size++)
 			;
 	}
 
@@ -33,8 +33,8 @@ char *argstostr(int ac, char **av)
 	i = 0;
 	for (arg = 0; arg < ac; arg++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			str[i++] = av[arg][byte];
+		for (bytes = 0; av[arg][bytes]; bytes++, str[i++] = av[arg][bytes])
+			;
 		str[i++] = '\n';
 	}
 	str[size] = '\0';
