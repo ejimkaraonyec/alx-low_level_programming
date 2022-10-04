@@ -22,8 +22,8 @@ char *argstostr(int ac, char **av)
 
 	for (arg = 0; arg < ac; arg++)
 	{
-		for (bytes = 0; av[arg][bytes]; bytes++, len++)
-			;
+		for (bytes = 0; av[arg][bytes]; bytes++)
+			len++;
 	}
 
 	str = malloc(sizeof(char) * len + 1);
@@ -33,9 +33,9 @@ char *argstostr(int ac, char **av)
 	i = 0;
 	for (arg = 0; arg < ac; arg++)
 	{
-		for (bytes = 0; av[arg][bytes]; bytes++, str[i] = av[arg][bytes])
-			;
-		str[i] = '\n';
+		for (bytes = 0; av[arg][bytes]; bytes++)
+			str[i++] = av[arg][bytes];
+		str[i++] = '\n';
 	}
 	str[len] = '\0';
 
