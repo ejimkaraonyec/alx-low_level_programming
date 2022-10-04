@@ -22,11 +22,11 @@ char *argstostr(int ac, char **av)
 
 	for (arg = 0; arg < ac; arg++)
 	{
-		for (bytes = 0; av[arg][bytes]; bytes++, size++)
+		for (bytes = 0; av[arg][bytes]; bytes++, len++)
 			;
 	}
 
-	str = malloc(sizeof(char) * size + 1);
+	str = malloc(sizeof(char) * len + 1);
 	if (str == NULL)
 		return (NULL);
 
@@ -37,7 +37,7 @@ char *argstostr(int ac, char **av)
 			;
 		str[i++] = '\n';
 	}
-	str[size] = '\0';
+	str[len] = '\0';
 
 	return (str);
 }
