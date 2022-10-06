@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
 		errors();
 	s1len = _strlen(s1);
 	s2len = _strlen(s2);
-	len = s1len + s2len;
-	result = malloc(sizeof(*result) * len + 1);
+	len = s1len + s2len + 1;
+	result = malloc(sizeof(*result) * len);
 	if (!result)
 		return (1);
-	for (i = 0; i <= len; i++)
-		*(result + i) = 0;
+	for (i = 0; i <= s1len + s2len; i++)
+		result[i] = 0;
 	for (s1len = s1len - 1; s1len >= 0; s1len--)
 	{
 		digit1 = s1[s1len] - '0';
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 		if (carry > 0)
 			result[s1len + s2len + 1] += carry;
 	}
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len - 1; i++)
 	{
 		if (result[i])
 			a = 1;
