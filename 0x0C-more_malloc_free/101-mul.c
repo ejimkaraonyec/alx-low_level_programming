@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	int s1len, s2len, len, i, carry, digit1, digit2, *result, a = 0;
 
 	s1 = argv[1], s2 = argv[2];
-	if (argc != 3 || !_isdigit(s1) || _isdigit(s2))
+	if (argc != 3 || !_isdigit(s1) || !_isdigit(s2))
 		errors();
 	s1len = _strlen(s1);
 	s2len = _strlen(s2);
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	{
 		digit1 = s1[s1len] - '0';
 		carry = 0;
-		for (s2len = s2len - 1; s2len >= 0; s2len--)
+		for (s2len = _strlen(s2) - 1; s2len >= 0; s2len--)
 		{
 			digit2 = s2[s2len] - '0';
 			carry += result[s1len + s2len + 1] + (digit1 * digit2);
