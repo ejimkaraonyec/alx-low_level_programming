@@ -9,3 +9,12 @@
 - `sum`: Write a function-like macro `SUM(x, y)` that computes the sum of the numbers `x` and `y`
 
 ### Resources
+
+- [Understanding C program compilation process](https://www.youtube.com/watch?v=eW5he5uFBNM)
+- [Object-like macros](https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Object-like-Macros.html#Object-like-Macros)
+- [Macro arguments](https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Macro-Arguments.html#Macro-Arguments)
+- [Pre processor directives in C](https://www.youtube.com/watch?v=X6HiYbY3Uak)
+- [The C preprocessor](https://www.cprogramming.com/tutorial/cpreprocessor.html)
+- [Standard predefined macros](https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Standard-Predefined-Macros.html#Standard-Predefined-Macros)
+- [Include guard](https://en.wikipedia.org/wiki/Include_guard)
+- [Common predifined macros](https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Common-Predefined-Macros.html#Common-Predefined-Macros)
