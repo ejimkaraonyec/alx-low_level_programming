@@ -7,7 +7,9 @@
  */
 
 void print_char(va_list chars)
+{
 	printf("%c", va_arg(chars, int));
+}
 
 /**
  * print_int - prints int
@@ -15,7 +17,9 @@ void print_char(va_list chars)
  */
 
 void print_int(va_list ints)
+{
 	printf("%d", va_arg(ints, int));
+}
 
 /**
  * print_float - prints float
@@ -23,7 +27,9 @@ void print_int(va_list ints)
  */
 
 void print_float(va_list floats)
+{
 	printf("%f", va_arg(floats, double));
+}
 
 /**
  * print_string - prints string
