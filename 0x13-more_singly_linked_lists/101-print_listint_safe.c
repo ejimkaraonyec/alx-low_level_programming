@@ -24,7 +24,7 @@ size_t looped_listint_len(const listint_t *head)
 		if (slow == fast)
 		{
 			slow = head;
-			for (; slow != fast; nodes_n)
+			for (; slow != fast; nodes_n++)
 			{
 				slow = slow->next;
 				fast = fast->next;
