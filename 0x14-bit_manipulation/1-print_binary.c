@@ -9,9 +9,14 @@ void print_binary(unsigned long int n)
 {
 	char b_rep;
 
-	if (n == 0 || n == 1)
+	if (n == 0)
 	{
-		_putchar(n);
+		_putchar('0');
+		return;
+	}
+	if (n == 1)
+	{
+		_putchar('1');
 		return;
 	}
 	print_binary(n >> 1);
