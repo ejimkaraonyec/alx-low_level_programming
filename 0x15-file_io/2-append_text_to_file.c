@@ -17,13 +17,16 @@ int append_text_to_file(const char *filename, char *text_content)
 	reader = open(filename, O_WRONLY | O_APPEND);
 
 	if (reader == -1)
+	{
+		close(reader);
 		return (-1);
+	}
 	if (text_content)
 	{
 		for (; text_content[count] != '\0'; count++)
 			;
 		output = write(reader, text_content, count);
-		if (output == -1)
+		if (output == -1 || output != count)
 			return (-1);
 	}
 	close(reader);
