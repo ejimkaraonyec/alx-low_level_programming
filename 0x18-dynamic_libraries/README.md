@@ -1,0 +1,5 @@
+# C - Dynamic libraries
+
+## Resource
+
+- [What is difference between Dynamic and Static library(Static and Dynamic linking)](https://www.youtube.com/watch?v=eW5he5uFBNM)
